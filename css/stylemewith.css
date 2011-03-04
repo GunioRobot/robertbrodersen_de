@@ -1,0 +1,79 @@
+@import url(reset.css);
+@charset "utf-8";
+
+/** globale klassen **/
+html { 
+	font-family: Helvetica, sans-serif;
+  font-size: 14px;
+  background-color: #fff;
+  color: #444;
+}
+
+/** text **/
+h1 {
+  font-size: 1.4em;
+  font-weight: normal;
+  text-transform: lowercase;
+}
+
+h1 a {
+  text-decoration: none;
+  color: #444;
+}
+
+/** rahmen um die seite - ohne impressum **/
+#seitenrahmen {
+  width: 580px;
+  margin: 0 50px;
+}
+
+/** header **/
+header {
+  margin-top: 100px;
+}
+
+header p {
+	font-size:0.7em;
+	text-transform: uppercase;
+}
+
+/** navigation **/
+nav {
+  margin: 40px 0px;
+}
+
+nav ul {
+	display:none;
+}
+
+nav li {
+	float:left;
+	list-style:none;
+	margin-right:0.5em;
+}
+
+nav li a {
+	-webkit-transition: color;
+	-webkit-transition-timing-function: ease-out;
+	-webkit-transition-duration: 1000ms;
+	color:#ccc;
+	text-decoration:none;
+}
+
+nav li a:hover {
+	-webkit-transition: color;
+	-webkit-transition-timing-function: ease-out;
+	-webkit-transition-duration: 200ms;
+	color:#444;
+	text-decoration:none;
+}
+
+/** inhalt **/
+
+article {
+	display:none;
+}
+
+.clear {
+  clear: both;
+}
