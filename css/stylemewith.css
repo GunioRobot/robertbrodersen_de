@@ -3,10 +3,10 @@
 
 /** globale klassen **/
 html { 
-	font-family: Helvetica, sans-serif;
-  font-size: 14px;
-  background-color: #fff;
-  color: #444;
+    font-family: Helvetica, sans-serif;
+    font-size: 14px;
+    background-color: #fff;
+    color: #444;
 }
 
 /** text **/
@@ -29,7 +29,7 @@ h1 a {
 
 /** header **/
 header {
-  margin-top: 100px;
+  margin-top: 250px;
 }
 
 header p {
@@ -43,7 +43,7 @@ nav {
 }
 
 nav ul {
-	display:none;
+	display:block;
 }
 
 nav li {
@@ -71,7 +71,6 @@ nav li a:hover {
 /** inhalt **/
 
 article {
-	display:none;
 }
 
 .clear {
