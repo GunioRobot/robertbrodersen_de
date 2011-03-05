@@ -55,7 +55,7 @@ nav li {
 nav li a {
 	-webkit-transition: color;
 	-webkit-transition-timing-function: ease-out;
-	-webkit-transition-duration: 1000ms;
+	-webkit-transition-duration: 1500ms;
 	color:#ccc;
 	text-decoration:none;
 }
@@ -70,8 +70,23 @@ nav li a:hover {
 
 /** inhalt **/
 
-article {
+article#soziale_netze {
+    display:none;
 }
+
+article#tagebuch {
+    display:none;
+}
+
+article#kontakt {
+    display:none;
+}
+
+article#impressum {
+    display:none;
+}
+
+/** kleine helfer **/
 
 .clear {
   clear: both;

@@ -1,55 +1,43 @@
 $(document).ready(function(){
 
-	function readURL(){
-		var urlArg = '';
-		var siteUrl = document.URL;
-		//alert('URL '+siteUrl);
-    	var myMatch = siteUrl.match(/#(.*)/);
-		//alert('myMatch '+myMatch);
-    	if(myMatch[1] && myMatch[1] != ''){
-			urlArg = myMatch[1];
-		} else {
-			urlArg = '1';
-		}
-		alert(urlArg);
-	}
-	
-	//readURL();
-	
-	if (urlArg == '1') {
-        $('#networks').fadeIn('slow');
+    var argumentURL = 'leer';
+    var seitenURL = document.URL;
+
+    function leseURL(){
+        var myMatch = seitenURL.match(/#(.*)/);
+        if(myMatch[1] != 'leer'){
+            argumentURL = myMatch[1];
+        } 
     }
-    else {
-        $('#'+urlArg).fadeIn('slow');
+
+    leseURL();
+
+    if (argumentURL != 'leer') {
+        $('#'+argumentURL).fadeIn('slow');
     }
     
-    $('.nav').click(function(){
-		$('#networks').toggle();
-		//readURL();
-        //hideItem(urlArg);
+    $('nav ul li a').click(function(){
+        alert('argument.click '+argumentURL);
+        blendeAus(this.href.match(/#(.*)/)[1]);
     });
     
-    function hideItem(clickedPanel){
-        if (clickedPanel == urlArg) {
-			return;
-		}
-        $('#footer').fadeOut('slow');
-		readURL();
-        $('#' + urlArg).fadeOut('slow', function(){
-            showItem(clickedPanel)
+    function blendeAus(clickedPanel){
+        alert('blendeaus.clickedPanel '+clickedPanel);
+        leseURL();
+        if (clickedPanel == argumentURL) {
+            return;
+        }
+        $('footer').fadeOut('slow');
+        alert('argument.fadeOut '+argumentURL);
+        $('#' + argumentURL).fadeOut('slow', function(){
+            showItem(clickedPanel);
         });
     }
     
     function showItem(clickedPanel){
-        urlArg = clickedPanel;
-        $('#' + urlArg).fadeIn('slow');
-        $('#footer').fadeIn('slow');
+        argumentURL = clickedPanel;
+        $('#' + argumentURL).fadeIn('slow');
+        $('footer').fadeIn('slow');
     }
     
-	// toggle #imprint visible/non visible by clicking
-    $('.itoggle').click(function(){
-        $('.imprint').slideToggle('slow');
-    });
-	
 });
-
