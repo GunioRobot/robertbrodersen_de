@@ -1,12 +1,16 @@
 @import url(resetmy.css);
 @charset "utf-8";
 
-/** globale klassen **/
+/** globalisierung **/
 html { 
     font-family: Helvetica, sans-serif;
     font-size: 14px;
     background-color: #fff;
     color: #444;
+}
+
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary{
+    display: block;
 }
 
 /** text **/
@@ -21,13 +25,13 @@ h1 a {
   color: #444;
 }
 
-/** rahmen um die seite - ohne impressum **/
+/** nur nicht aus dem rahmen fallen **/
 #seitenrahmen {
   width: 580px;
   margin: 0 50px;
 }
 
-/** header **/
+/** köpfchen **/
 header {
   margin-top: 250px;
 }
@@ -37,13 +41,17 @@ header p {
 	text-transform: uppercase;
 }
 
+header p a {
+    text-decoration: none;
+    color: #444;
+}
+
 /** navigation **/
 nav {
-  margin: 40px 0px;
+    margin-top: 40px;
 }
 
 nav ul {
-	display:block;
 }
 
 nav li {
@@ -68,22 +76,42 @@ nav li a:hover {
 	text-decoration:none;
 }
 
-/** inhalt **/
+nav li.active a {
+    color:#dd0707;
+}
+
+/** inhaltlich dünn **/
+
+#inhalt {
+    margin-top:30px;
+}
+
+article {
+    display:none;
+}
+
+article li {
+    list-style:none;
+}
 
 article#soziale_netze {
-    display:none;
 }
 
 article#tagebuch {
-    display:none;
 }
 
 article#kontakt {
-    display:none;
 }
 
 article#impressum {
-    display:none;
+}
+
+/** bei fuss **/
+
+footer {
+    margin-top:20px;
+    font-size:10px;
+    color:#ccc;
 }
 
 /** kleine helfer **/

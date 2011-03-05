@@ -13,10 +13,18 @@ $(document).ready(function(){
     leseURL();
 
     if (argumentURL != 'leer') {
-        $('#'+argumentURL).addClass('active').fadeIn('slow');
+        $('#'+argumentURL).addClass('active').fadeIn('slow', function(){
+            $('nav li a').each(function(){
+                if(this.href.match(/#(.*)/)[1] == argumentURL) {
+                    $(this).parent().addClass('active');
+                }
+            });
+        });
     }
     
     $('nav ul li a').click(function(){
+        $('nav li').removeClass('active');
+        $(this).parent().addClass('active');
         blendeAus(this.href.match(/#(.*)/)[1]);
     });
     
@@ -37,5 +45,12 @@ $(document).ready(function(){
             $('footer').fadeIn('slow');
         });
     }
+    
+    $(function(){
+        $('article ul li a').click(function(){
+            window.open(this.href);
+            return false;
+        });
+    });
     
 });
