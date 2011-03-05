@@ -48,7 +48,7 @@ header p a {
 
 /** navigation **/
 nav {
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
 nav ul {
@@ -83,7 +83,7 @@ nav li.active a {
 /** inhaltlich dünn **/
 
 #inhalt {
-    margin-top:30px;
+    margin-top:60px;
 }
 
 article {

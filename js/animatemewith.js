@@ -30,8 +30,12 @@ $(document).ready(function(){
     
     function blendeAus(clickedPanel){
         leseURL();
-        if (clickedPanel == argumentURL) {
-            return;
+        switch (argumentURL) {
+            case clickedPanel:
+                return;
+            case 'leer':
+                showItem(clickedPanel);
+                break;
         }
         $('footer').fadeOut('slow', function(){
             $('#' + argumentURL).removeClass('active').fadeOut('slow', function(){
