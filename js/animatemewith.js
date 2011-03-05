@@ -1,11 +1,11 @@
 $(document).ready(function(){
 
     var argumentURL = 'leer';
-    var seitenURL = document.URL;
 
     function leseURL(){
+        var seitenURL = document.URL;
         var myMatch = seitenURL.match(/#(.*)/);
-        if(myMatch[1] != 'leer'){
+        if(myMatch !== null){
             argumentURL = myMatch[1];
         } 
     }
@@ -13,31 +13,29 @@ $(document).ready(function(){
     leseURL();
 
     if (argumentURL != 'leer') {
-        $('#'+argumentURL).fadeIn('slow');
+        $('#'+argumentURL).addClass('active').fadeIn('slow');
     }
     
     $('nav ul li a').click(function(){
-        alert('argument.click '+argumentURL);
         blendeAus(this.href.match(/#(.*)/)[1]);
     });
     
     function blendeAus(clickedPanel){
-        alert('blendeaus.clickedPanel '+clickedPanel);
         leseURL();
         if (clickedPanel == argumentURL) {
             return;
         }
-        $('footer').fadeOut('slow');
-        alert('argument.fadeOut '+argumentURL);
-        $('#' + argumentURL).fadeOut('slow', function(){
-            showItem(clickedPanel);
+        $('footer').fadeOut('slow', function(){
+            $('#' + argumentURL).removeClass('active').fadeOut('slow', function(){
+                showItem(clickedPanel);
+            });
         });
     }
     
     function showItem(clickedPanel){
-        argumentURL = clickedPanel;
-        $('#' + argumentURL).fadeIn('slow');
-        $('footer').fadeIn('slow');
+        $('#' + clickedPanel).addClass('active').fadeIn('slow', function(){
+            $('footer').fadeIn('slow');
+        });
     }
     
 });
