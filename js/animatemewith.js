@@ -22,12 +22,14 @@ $(document).ready(function(){
         });
     }
     
-    $('nav ul li a').click(function(){
+    // Hmm, navigiere, navigiere ...
+    $('nav ul li').click(function(){
         $('nav li').removeClass('active');
-        $(this).parent().addClass('active');
+        $(this).addClass('active');
         blendeAus(this.href.match(/#(.*)/)[1]);
     });
     
+    // Weg mit dem Alten ...
     function blendeAus(clickedPanel){
         leseURL();
         switch (argumentURL) {
@@ -44,17 +46,17 @@ $(document).ready(function(){
         });
     }
     
+    // ... und her mit dem neuen
     function showItem(clickedPanel){
         $('#' + clickedPanel).addClass('active').fadeIn('slow', function(){
             $('footer').fadeIn('slow');
         });
     }
     
-    $(function(){
-        $('article ul li a').click(function(){
-            window.open(this.href);
-            return false;
-        });
+    // Target _blank im jQuery-Style
+    $('article ul li a').click(function(){
+        window.open(this.href);
+        return false;
     });
     
 });

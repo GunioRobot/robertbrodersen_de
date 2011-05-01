@@ -2,7 +2,8 @@
 @charset "utf-8";
 
 /** globalisierung **/
-html { 
+html {
+    background-image:url(../nicepics/background.jpg);
     font-family: Helvetica, sans-serif;
     font-size: 14px;
     background-color: #fff;
@@ -23,6 +24,7 @@ h1 {
 h1 a {
   text-decoration: none;
   color: #444;
+  text-shadow: 1px 1px 1px #fff;
 }
 
 /** nur nicht aus dem rahmen fallen **/
@@ -64,15 +66,16 @@ nav li a {
     -webkit-transition: color;
     -webkit-transition-timing-function: ease-out;
     -webkit-transition-duration: 1500ms;
-    color:#ccc;
+    color:#777;
     text-decoration:none;
+    text-shadow: 1px 1px 1px #fff;
 }
 
 nav li a:hover {
     -webkit-transition: color;
     -webkit-transition-timing-function: ease-out;
     -webkit-transition-duration: 200ms;
-    color:#444;
+    color:#dd0707;
     text-decoration:none;
 }
 
@@ -115,7 +118,7 @@ article a:hover {
 footer {
     margin-top:20px;
     font-size:10px;
-    color:#ccc;
+    color:#999;
 }
 
 /** kleine helfer **/
