@@ -1,62 +1,61 @@
-$(document).ready(function(){
+$(document).ready(function () {
 
     var argumentURL = 'leer';
 
-    function leseURL(){
+    function leseURL() {
         var seitenURL = document.URL;
         var myMatch = seitenURL.match(/#(.*)/);
-        if(myMatch !== null){
+        if (myMatch !== null) {
             argumentURL = myMatch[1];
-        } 
+        }
     }
 
     leseURL();
 
-    if (argumentURL != 'leer') {
-        $('#'+argumentURL).addClass('active').fadeIn('slow', function(){
-            $('nav li a').each(function(){
-                if(this.href.match(/#(.*)/)[1] == argumentURL) {
+    if (argumentURL !== 'leer') {
+        $('#' + argumentURL).addClass('active').fadeIn('slow', function () {
+            $('nav li a').each(function () {
+                if (this.href.match(/#(.*)/)[1] === argumentURL) {
                     $(this).parent().addClass('active');
                 }
             });
         });
     }
-    
-    // Hmm, navigiere, navigiere ...
-    $('nav ul li').click(function(){
-        $('nav li').removeClass('active');
-        $(this).addClass('active');
-        blendeAus(this.href.match(/#(.*)/)[1]);
-    });
-    
+
+    // ... und her mit dem neuen
+    function showItem(clickedPanel) {
+        $('#' + clickedPanel).addClass('active').fadeIn('slow', function () {
+            $('footer').fadeIn('slow');
+        });
+    }
+
     // Weg mit dem Alten ...
-    function blendeAus(clickedPanel){
+    function blendeAus(clickedPanel) {
         leseURL();
         switch (argumentURL) {
-            case clickedPanel:
-                return;
-            case 'leer':
-                showItem(clickedPanel);
-                break;
+        case clickedPanel:
+            return;
+        case 'leer':
+            showItem(clickedPanel);
+            break;
         }
-        $('footer').fadeOut('slow', function(){
-            $('#' + argumentURL).removeClass('active').fadeOut('slow', function(){
+        $('footer').fadeOut('slow', function () {
+            $('#' + argumentURL).removeClass('active').fadeOut('slow', function () {
                 showItem(clickedPanel);
             });
         });
     }
-    
-    // ... und her mit dem neuen
-    function showItem(clickedPanel){
-        $('#' + clickedPanel).addClass('active').fadeIn('slow', function(){
-            $('footer').fadeIn('slow');
-        });
-    }
-    
-    // Target _blank im jQuery-Style
-    $('article ul li a').click(function(){
+
+    // Hmm, navigiere, navigiere ...
+    $('nav ul li').click(function () {
+        $('nav li').removeClass('active');
+        $(this).addClass('active');
+        blendeAus(this.href.match(/#(.*)/)[1]);
+    });
+
+    // Target _blank jQuery-Style
+    $('article ul li a').click(function () {
         window.open(this.href);
         return false;
     });
-    
 });
