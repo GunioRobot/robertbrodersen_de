@@ -1,11 +1,11 @@
-@import url(resetmy.css);
 @charset "utf-8";
+@import url(resetmy.css);
 
 /** globalisierung **/
 html {
     background-image:url(../nicepics/background.jpg);
     font-family: Helvetica, sans-serif;
-    font-size: 14px;
+    font-size: 18px;
     background-color: #fff;
     color: #444;
 }
@@ -17,7 +17,7 @@ article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,su
 /** text **/
 h1 {
   font-size: 1.4em;
-  font-weight: normal;
+  font-weight: bolder;
   text-transform: lowercase;
 }
 
@@ -75,12 +75,12 @@ nav li a:hover {
     -webkit-transition: color;
     -webkit-transition-timing-function: ease-out;
     -webkit-transition-duration: 200ms;
-    color:#dd0707;
-    text-decoration:none;
+    color:#ff1493;
+    text-decoration:underline;
 }
 
 nav li.active a {
-    color:#dd0707;
+    color:#ff1493;
 }
 
 /** inhaltlich dünn **/
@@ -117,7 +117,7 @@ article a:hover {
 
 footer {
     margin-top:20px;
-    font-size:10px;
+    font-size:0.6em;
     color:#999;
 }
 
