@@ -16,7 +16,7 @@ article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,su
 
 /** text **/
 h1 {
-  font-size: 1.4em;
+  font-size: 4em;
   font-weight: bolder;
   text-transform: lowercase;
 }
@@ -110,6 +110,7 @@ article a:hover {
     -webkit-transition-timing-function: ease-out;
     -webkit-transition-duration: 200ms;
     color:#444;
+    text-shadow: -1px -1px 1px #fff;
     text-decoration:none;
 }
 

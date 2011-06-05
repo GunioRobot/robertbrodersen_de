@@ -16,7 +16,6 @@ function handleHash() {
 // ... und her mit dem neuen
 function showItem(clickedPanel) {
     "use strict";
-    console.log(clickedPanel);
     $(clickedPanel).addClass('active').fadeIn('slow', function () {
         $('footer').fadeIn('slow');
     });
@@ -25,10 +24,9 @@ function showItem(clickedPanel) {
 // Weg mit dem Alten ...
 function blendeAus(clickedPanel) {
     "use strict";
-    $('footer').fadeOut('slow', function () {
-        $('article').removeClass('active').fadeOut('slow', function () {
-            showItem(clickedPanel);
-        });
+    $('footer').fadeOut('fast', function () {
+        $('article').removeClass('active').fadeOut('slow');
+        showItem(clickedPanel);
     });
 }
 
