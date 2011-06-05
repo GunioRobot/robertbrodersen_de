@@ -16,7 +16,8 @@ function handleHash() {
 // ... und her mit dem neuen
 function showItem(clickedPanel) {
     "use strict";
-    $('#' + clickedPanel).addClass('active').fadeIn('slow', function () {
+    console.log(clickedPanel);
+    $(clickedPanel).addClass('active').fadeIn('slow', function () {
         $('footer').fadeIn('slow');
     });
 }
@@ -24,15 +25,8 @@ function showItem(clickedPanel) {
 // Weg mit dem Alten ...
 function blendeAus(clickedPanel) {
     "use strict";
-    switch (argumentURL) {
-    case clickedPanel:
-        return;
-    case 'leer':
-        showItem(clickedPanel);
-        break;
-    }
     $('footer').fadeOut('slow', function () {
-        $('#' + argumentURL).removeClass('active').fadeOut('slow', function () {
+        $('article').removeClass('active').fadeOut('slow', function () {
             showItem(clickedPanel);
         });
     });
@@ -45,10 +39,10 @@ $(document).ready(function () {
     handleHash();
     
     // Navigiere, navigiere ...
-    $('nav ul li').click(function () {
+    $('nav ul li a').click(function () {
         $('nav li').removeClass('active');
-        $(this).addClass('active');
-        blendeAus(this.href);
+        $(this).parent().addClass('active');
+        blendeAus($(this).attr('href'));
     });
     
     // Target _blank jQuery-Style
