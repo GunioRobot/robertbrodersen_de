@@ -1,7 +1,5 @@
 $(document).ready(function () {
 
-    var argumentURL = 'leer';
-
     function leseURL() {
         var seitenURL = document.URL;
         var myMatch = seitenURL.match(/#(.*)/);
