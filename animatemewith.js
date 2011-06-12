@@ -1,4 +1,6 @@
-/*jshint jquery: true, browser: true, bitwise: true, curly: true, eqeqeq: true, noempty: true, onevar: true, plusplus: true, undef: true, strict: true, white: true */
+/*jslint white: true, onevar: true, browser: true, undef: true, nomen: true, regexp: true, plusplus: true, bitwise: true, newcap: true, strict: true, maxerr: 50, indent: 4 */
+/*globals $ */
+"use strict";
 
 function handleHash() {
     "use strict";
