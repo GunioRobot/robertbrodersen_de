@@ -3,131 +3,146 @@
 
 /** globalisierung **/
 html {
-    background-image:url(background.jpg);
-    font-family: Helvetica, sans-serif;
-    font-size: 18px;
-    background-color: #fff;
-    color: #444;
+	background-image:url(background.jpg);
+	font-family: Helvetica, sans-serif;
+	font-size: 18px;
+	background-color: #fff;
+	color: #444;
 }
-
-article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary{
-    display: block;
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+	display: block;
 }
-
 /** text **/
 h1 {
-  font-size: 4em;
-  font-weight: bolder;
-  text-transform: lowercase;
+	font-size: 4em;
+	font-weight: bolder;
+	text-transform: lowercase;
 }
-
 h1 a {
-  text-decoration: none;
-  color: #444;
-  text-shadow: 1px 1px 1px #fff;
+	text-decoration: none;
+	color: #444;
+	text-shadow: 1px 1px 1px #fff;
 }
-
 /** nur nicht aus dem rahmen fallen **/
 #seitenrahmen {
-  width: 580px;
-  margin: 0 50px;
+	width: 580px;
+	margin: 0 50px;
 }
-
 /** köpfchen **/
 header {
-  margin-top: 250px;
+	margin-top: 250px;
 }
-
 header p {
 	font-size:0.7em;
 	text-transform: uppercase;
 }
-
 header p a {
-    text-decoration: none;
-    color: #444;
+	text-decoration: none;
+	color: #444;
 }
-
 /** navigation **/
 nav {
-    margin-top: 20px;
+	margin-top: 20px;
 }
-
 nav ul {
 }
-
 nav li {
 	float:left;
 	list-style:none;
 	margin-right:0.5em;
 }
-
 nav li a {
     -webkit-transition: color;
+    -moz-transition: color;
+    -o-transition: color;
+    transition: color;
     -webkit-transition-timing-function: ease-out;
+    -moz-transition-timing-function: ease-out;
+    -o-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
     -webkit-transition-duration: 1500ms;
-    color:#777;
-    text-decoration:none;
-    text-shadow: 1px 1px 1px #fff;
-}
-
+    -moz-transition-duration: 1500ms;
+    -o-transition-duration: 1500ms;
+    transition-duration: 1500ms;
+    color: #777;
+    text-decoration: none;
+    text-shadow: 1px 1px 1px #fff
+    }
 nav li a:hover {
     -webkit-transition: color;
+    -moz-transition: color;
+    -o-transition: color;
+    transition: color;
     -webkit-transition-timing-function: ease-out;
+    -moz-transition-timing-function: ease-out;
+    -o-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
     -webkit-transition-duration: 200ms;
-    color:#ff1493;
-    text-decoration:underline;
+    -moz-transition-duration: 200ms;
+    -o-transition-duration: 200ms;
+    transition-duration: 200ms;
+    color: #ff1493;
+    text-decoration: underline
+    }nav li.active a {
+	color:#ff1493;
 }
-
-nav li.active a {
-    color:#ff1493;
-}
-
 /** inhaltlich dünn **/
 
 #inhalt {
-    margin:60px 10px 0;
+	margin:60px 10px 0;
 }
-
 article {
-    display:none;
+	display:none;
 }
-
 article li {
-    list-style:none;
+	list-style:none;
 }
-
 article a {
     -webkit-transition: color;
+    -moz-transition: color;
+    -o-transition: color;
+    transition: color;
     -webkit-transition-timing-function: ease-out;
+    -moz-transition-timing-function: ease-out;
+    -o-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
     -webkit-transition-duration: 1500ms;
-    color:#ccc;
-    text-decoration:none;
-}
+    -moz-transition-duration: 1500ms;
+    -o-transition-duration: 1500ms;
+    transition-duration: 1500ms;
+    color: #ccc;
+    text-decoration: none
+    }
 
 article a:hover {
     -webkit-transition: color;
+    -moz-transition: color;
+    -o-transition: color;
+    transition: color;
     -webkit-transition-timing-function: ease-out;
+    -moz-transition-timing-function: ease-out;
+    -o-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
     -webkit-transition-duration: 200ms;
-    color:#444;
+    -moz-transition-duration: 200ms;
+    -o-transition-duration: 200ms;
+    transition-duration: 200ms;
+    color: #444;
     text-shadow: -1px -1px 1px #fff;
-    text-decoration:none;
-}
-
+    text-decoration: none
+    }
 /** bei fuss **/
 
 footer {
-    margin-top:20px;
-    font-size:0.6em;
-    color:#999;
+	margin-top:20px;
+	font-size:0.6em;
+	color:#999;
 }
-
 /** kleine helfer **/
 
 .clear {
-  clear: both;
+	clear: both;
 }
-
 .no {
-    display:none;
+	display:none;
 }
