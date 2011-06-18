@@ -3,7 +3,6 @@
 "use strict";
 
 function handleHash() {
-    "use strict";
     var urlHash = location.hash;
     if (urlHash !== "") {
         $(urlHash).addClass('active').fadeIn('slow');
@@ -17,7 +16,6 @@ function handleHash() {
 
 // ... und her mit dem neuen
 function showItem(clickedPanel) {
-    "use strict";
     $(clickedPanel).addClass('active').fadeIn('slow', function () {
         $('footer').fadeIn('slow');
     });
@@ -25,7 +23,6 @@ function showItem(clickedPanel) {
 
 // Weg mit dem Alten ...
 function blendeAus(clickedPanel) {
-    "use strict";
     $('footer').fadeOut('fast', function () {
         $('article').removeClass('active').fadeOut('slow');
         showItem(clickedPanel);
@@ -33,7 +30,6 @@ function blendeAus(clickedPanel) {
 }
 
 $(document).ready(function () {
-    "use strict";
     
     // Ist die Seite mit einem Hash aufgerufen worden?
     handleHash();
@@ -43,11 +39,5 @@ $(document).ready(function () {
         $('nav li').removeClass('active');
         $(this).parent().addClass('active');
         blendeAus($(this).attr('href'));
-    });
-    
-    // Target _blank jQuery-Style
-    $('article ul li a').click(function () {
-        window.open(this.href);
-        return false;
     });
 });
