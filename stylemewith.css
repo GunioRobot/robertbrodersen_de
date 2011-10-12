@@ -14,11 +14,15 @@ a:visited {
 }
 h1 {
 	font-size: 4em;
-	font-weight: bolder;
+	font-weight: bold;
 	text-transform: lowercase;
 }
 h1 a {
 	text-shadow: 1px 1px 1px #fff;
+}
+h1 a:hover {
+	color: #fff;
+	text-shadow: 1px 1px 1px #000;
 }
 #seitenrahmen {
 	width: 580px;
