@@ -1,2 +1,3 @@
-.project
-.esproj
+*.project
+*.esproj
+*.DS_Store
